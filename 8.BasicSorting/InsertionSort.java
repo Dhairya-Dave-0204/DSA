@@ -21,8 +21,7 @@ public class InsertionSort {
         for (int i = 1; i < arr.length; i++) {
             int currentPositionValue = arr[i];
             int previousPosition = i - 1;
-            // We will compare the current element with the previous elements to find out
-            // correct position
+            // We will compare the current element with the previous elements to find out correct position
             while (previousPosition >= 0 && arr[previousPosition] > currentPositionValue) {
                 arr[previousPosition + 1] = arr[previousPosition];
                 previousPosition--;
