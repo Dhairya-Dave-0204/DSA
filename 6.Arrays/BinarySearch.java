@@ -21,7 +21,7 @@ public class BinarySearch {
         int end = arr.length - 1;
         while (start <= end) {
             int mid = (start + end) / 2;
-            if (arr[mid] == key) {
+            if (arr[mid] == key)     {
                 return mid;
             } else if (arr[mid] < key) {
                 start = mid + 1;
