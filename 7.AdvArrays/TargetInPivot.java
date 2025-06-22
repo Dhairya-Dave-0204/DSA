@@ -17,34 +17,45 @@ public class TargetInPivot {
         System.out.print("Enter the pivot index: ");
         int pivotIndex = input.nextInt();
 
-        // System.out.print("\n Enter target: ");
-        // int target = input.nextInt();
+        System.out.print("\n Enter target: ");
+        int target = input.nextInt();
 
         pivotRotate(arr, pivotIndex);
-        System.out.println("Your array after pivot rotation: ");
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
-        }
 
-        // int result = findTarget(arr, target);
-        // if (result == -1) {
-        //     System.out.println("Not found");
-        // } else {
-        //     System.out.println("Found at index " + result);
-        // }
+        int result = findTarget(arr, target);
+        if (result == -1) {
+            System.out.println("\n Key not found not found");
+        } else {
+            System.out.println("\n Found at index " + result);
+        }
 
         input.close();
     }
 
     public static void pivotRotate(int arr[], int pivotIndex) {
-        int size = arr.length;
-        // If length of the array is even the we can directly swap the start with the pivot
-        if(size % 2 == 0) {
-            for (int i = 0; i < pivotIndex; i++) {
-                int temp = arr[i];
-                arr[i] = arr[pivotIndex + i];
-                arr[pivotIndex + i] = temp;
-            }
+        if (pivotIndex <= 0 || pivotIndex >= arr.length) {
+            System.out.println("Invalid pivot index");
+            return;
+        }
+
+        int pivotArray[] = new int[arr.length];
+        int index = 0;
+
+        // Array from piot index to end transfer to piotArray
+        for (int i = pivotIndex; i < arr.length; i++) {
+            pivotArray[index] = arr[i];
+            index++;
+        }
+
+        // Array from start to piot index transfer to back of piot array
+        for (int i = 0; i < pivotIndex; i++) {
+            pivotArray[index] = arr[i];
+            index++;            
+        }
+        
+        System.out.println("The array rortated on basis of piovt index is: ");
+        for (int i = 0; i < pivotArray.length; i++) {
+            System.out.print(pivotArray[i] + " ");
         }
     }
 
