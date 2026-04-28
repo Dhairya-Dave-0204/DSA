@@ -2,9 +2,8 @@ import java.util.*;
 
 public class IsArraySorted {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
 
-        int arr[] = { 1, 2, 3, 5, 8, 9 };
+        int arr[] = { 4, 10, 3, 5, 8, 9 };
 
         boolean sorted = isSorted(arr);
 
@@ -14,7 +13,6 @@ public class IsArraySorted {
             System.out.println("The array is not sorted");
         }
 
-        input.close();
     }
 
     public static boolean isSorted(int arr[]) {
