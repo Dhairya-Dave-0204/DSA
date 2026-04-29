@@ -1,3 +1,5 @@
+// Two pointer method implementation 
+
 public class MoveZeroToLast {
     public static void main(String[] args) {
         int arr[] = { 1, 0, 3, 4, 0 };
