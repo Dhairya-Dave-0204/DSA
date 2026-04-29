@@ -20,9 +20,10 @@ public class RemoveDuplicate {
                 pointer++;
             }
         } 
+        // return Arrays.copyOf(arr, pointer); 
 
         System.out.println("The array after processing");
-        for (int i = 0; i < arr.length; i++) {
+        for (int i = 0; i < pointer; i++) {
             System.out.print(arr[i] + ", ");
         }
 
